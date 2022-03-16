@@ -1,0 +1,32 @@
+<div class="main">
+
+  <img id="verification" src="assets/img/numberdetection.png" alt="Verification"/>
+  <div class="blankspace"></div>
+
+  <div class="child">
+
+    <form (submit)="submitForm()">
+
+      <label for="phone_number">Please enter the verification code</label>
+      <div class="inputbackground">
+        <input id="phone_number" type="number" name="code" placeholder="" [(ngModel)]="code"/>
+
+      </div>
+      <div style="color: red; font-size: 12px" *ngIf="invalidCode">{{errorMessage}}</div>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+
+      <input id="submitDetection" type="submit" value="next" [disabled]="code == ''"/><br/>
+    </form>
+
+
+    <div class="blankspace"></div>
+    <div class="blankspace"></div>
+
+  </div>
+
+  <div class="blankspace"></div>
+
+</div>

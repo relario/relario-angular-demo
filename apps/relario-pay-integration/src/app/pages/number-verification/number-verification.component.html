@@ -1,0 +1,36 @@
+<div class="main">
+
+  <img id="verification" src="/assets/img/numberdetection.png" alt="Verification"/>
+  <div class="blankspace"></div>
+
+  <div class="child" *ngIf="mobileNumber">
+    <p>We have detected your mobile number as <span id="phoneDetected" class="highlighttext">{{'+' + mobileNumber}}</span>.</p>
+    <div class="blankspace"></div>
+
+
+    <button id="moveToSuccess" routerLink="/success" class="btn">next</button>
+
+    <div class="blankspace"></div>
+    <div class="blankspace"></div>
+
+    <button id="enterManually" routerLink="/manual" class="btn">enter manually</button>
+
+
+  </div>
+
+  <div class="child" *ngIf="!mobileNumber">
+    <p>Your automatic mobile number verification has timed out.</p>
+    <p>Please <span id="phoneDetected" class="highlighttext">enter your number manually</span>.</p>
+    <div class="blankspace"></div>
+
+
+    <button id="inputNumber" routerLink="/manual" class="btn">next</button>
+
+    <div class="blankspace"></div>
+    <div class="blankspace"></div>
+
+  </div>
+
+  <div class="blankspace"></div>
+
+</div>

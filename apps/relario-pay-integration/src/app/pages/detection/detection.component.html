@@ -1,0 +1,48 @@
+<div class="main">
+
+  <img id="verification" src="assets/img/check-inputs.png" alt="Verification"/>
+  <div class="blankspace"></div>
+
+  <div class="child">
+
+<!--    <form action="numberverification.html">-->
+      <label for="country_list">We have detected that you are on the</label>
+      <!--    <div style="width: 60%">-->
+      <select name="countries" id="country_list" [(ngModel)]="selectedCountry" (change)="selectCountry($event)">
+        <option>-- Choose Country --</option>
+        <option *ngFor="let country of countries">{{country}}</option>
+      </select>
+      <!--    </div>-->
+      <!--    <div>-->
+      <select name="network" id="network_list" [(ngModel)]="selectedNetwork">
+        <option>-- Choose Network --</option>
+        <option *ngFor="let network of networks ">{{network}}</option>
+      </select>
+      <!--    </div>-->
+      <label for="network_list"> network.</label>
+
+      <p class="instructions">Update <span class="highlighttext">country</span> and/or <span
+        class="highlighttext">mobile network</span> from dropdowns if necessary.</p>
+      <div class="blankspace"></div>
+
+      <button id="submitDetection" type="submit" [disabled]="buttonText == 'Waiting'"  (click)="createTransaction()">
+        <span *ngIf="buttonText === buttonTextType.next; else counter">Next</span>
+        <ng-template #counter>
+          <countdown #cd [config]="countdownConfig" (event)="handleCountdown($event)"></countdown>
+        </ng-template>
+      </button><br/>
+<!--    </form>-->
+
+    <div class="blankspace"></div>
+
+    <p class="instructions">Pressing on <span class="highlighttext">NEXT</span> will take you
+      to your SMS messaging app. Please press <span class="highlighttext">SEND</span> there and return to your
+      browser.</p>
+
+    <div class="blankspace"></div>
+
+  </div>
+
+  <div class="blankspace"></div>
+
+</div>

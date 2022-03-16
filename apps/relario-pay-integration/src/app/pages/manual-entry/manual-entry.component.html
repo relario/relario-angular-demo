@@ -1,0 +1,38 @@
+<div class="main">
+
+  <img id="verification" src="assets/img/numberdetection.png" alt="Verification"/>
+  <div class="blankspace"></div>
+
+  <div class="child">
+
+    <form (submit)="submitForm()">
+
+      <label for="phone_number">Please enter your phone number</label>
+      <div class="inputbackground">
+
+        <select name="countryCode" id="country_code" (change)="countryCodeChange($event)">
+          <option *ngFor="let code of countryCodes" [selected]="code == this.selectedCountryCode" [value]="code">{{'+' + code}}</option>
+        </select>
+
+        <input id="phone_number" type="number" name="phone" placeholder="phone number" [(ngModel)]="phoneNumber"/>
+
+      </div>
+      <div style="font-size: 12px; color: red" *ngIf="error">{{error}}</div>
+      <countdown style="color: red; font-size: 12px" #cd [config]="countDownConfig" *ngIf="timer > 0" (event)="handleZero($event)"></countdown>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+      <div class="blankspace"></div>
+
+      <input id="submitDetection" type="submit" value="next" [disabled]="phoneNumber == '' || disableBtn"/><br/>
+    </form>
+
+
+    <div class="blankspace"></div>
+    <div class="blankspace"></div>
+
+  </div>
+
+  <div class="blankspace"></div>
+
+</div>
