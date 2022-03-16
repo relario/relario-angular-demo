@@ -3,6 +3,6 @@
   "projects": {
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
-    "relario-pay-integration": "apps/relario-pay-integration",
+    "relario-pay-integration": "apps/relario-pay-integration"
   }
 }

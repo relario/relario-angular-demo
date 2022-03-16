@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:3000',
+  apiUrl: 'http://localhost:3333/api',
   // apiUrl: 'https://34b4-188-26-58-231.ngrok.io',
   ipDiscoverApiUrl: 'https://api.ipify.org?format=json'
 };

@@ -20,8 +20,11 @@ export class PayService {
 
 
   handlePaymentNotification(payment: RelarioPayPaymentNotification): void {
+    // Handle the payment as in merchant documentation
     console.log(payment);
   }
+
+
 
   async createTransaction(ipAddress: string): Promise<RelarioPayTransactionResponse> {
     const transaction: RelarioPayTransactionRequest = {
@@ -32,14 +35,23 @@ export class PayService {
       paymentType: 'sms',
       customerIpAddress: ipAddress
     }
-    const transactionResult = await lastValueFrom(this.http.post<RelarioPayTransactionResponse>(`${environment.relarioApiUrl}/transactions`, transaction))
+    const transactionResult = await lastValueFrom(this.http.post<RelarioPayTransactionResponse>(`${environment.relarioApiUrl}/transactions`, transaction, {
+      headers: {
+        'Authorization': `Bearer ${environment.relarioApikey}`
+      }
+    }))
 
     this.transactions[transactionResult.data.transactionId] = transactionResult.data;
     return transactionResult.data;
   }
 
   async getTransactionDetails(transactionId: string): Promise<RelarioPayTransactionDetails> {
-    const result = await lastValueFrom(this.http.get<RelarioPayTransactionDetails>(`${environment.relarioApiUrl}/transactions/${transactionId}`));
+    const result = await lastValueFrom(this.http.get<RelarioPayTransactionDetails>(`${environment.relarioApiUrl}/transactions/${transactionId}`, {
+      headers: {
+        'Authorization': `Bearer ${environment.relarioApikey}`
+      }
+    }));
     return result.data;
   }
+
 }

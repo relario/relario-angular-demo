@@ -1,1 +1,222 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&display=swap');
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 0 !important;
+}
+
+body {
+  text-decoration: none;
+  background-color: #EEF0F2;
+  width: 100%;
+  color: #4B3767;
+  padding: 0;
+  margin: 0;
+  font-family: 'Fira Sans', sans-serif;
+  vertical-align: middle;
+  font-size: 20px;
+  line-height: 34px;
+  text-align: center;
+}
+
+/* Buttons */
+.btn {
+  line-height: 1.5em;
+  transition: 300ms;
+  font-weight: 600;
+  font-size: 20px;
+  color: #F5238D;
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 3em;
+  background-color: transparent;
+  border: 3px solid #ED2B8D;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='rgba(237, 43, 141, 1)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  cursor: pointer;
+
+}
+
+#submitDetection:disabled,
+button[disabled] {
+  line-height: 1.5em;
+  transition: 300ms;
+  font-weight: 600;
+  font-size: 20px;
+  color: #999999;
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 3em;
+  background-color: transparent;
+  border: 3px solid #999999;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='rgba(153,153,153)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  cursor: pointer;
+
+}
+
+.btn::after {
+  background-color: #F5238D;
+  color: white;
+}
+
+.btn:hover {
+  transition: 300ms;
+  background-color: #F5238D;
+  color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='white'/%3E%3C/svg%3E");
+
+}
+
+.btn:focus {
+  transition: 300ms;
+  background-color: #F5238D;
+  color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='white'/%3E%3C/svg%3E");
+
+}
+
+/* Submit Form Button - Countries and Network Selection */
+#submitDetection {
+  line-height: 1.5em;
+  transition: 300ms;
+  font-weight: 600;
+  font-size: 20px;
+  color: #F5238D;
+  padding: 0.5em;
+  width: 100%;
+  border-radius: 3em;
+  background-color: transparent;
+  border: 3px solid #ED2B8D;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='rgba(237, 43, 141, 1)'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 24px center;
+  cursor: pointer;
+
+}
+
+#submitDetection::after {
+  background-color: #F5238D;
+  color: white;
+}
+
+#submitDetection:hover {
+  transition: 300ms;
+  background-color: #F5238D;
+  color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='white'/%3E%3C/svg%3E");
+
+}
+
+#submitDetection:focus {
+  transition: 300ms;
+  background-color: #F5238D;
+  color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7.41' height='12' viewBox='0 0 7.41 12'%3E%3Cpath d='M10,6,8.59,7.41,13.17,12,8.59,16.59,10,18l6-6Z' transform='translate(-8.59 -6)' fill='white'/%3E%3C/svg%3E");
+
+}
+
+/* End of Buttons */
+
+.highlighttext {
+  color: #F5238D;
+}
+
+.blankspace {
+  padding: 0.6em 0 0.6em 0;
+}
+
+#verification {
+  margin-top: 1em;
+}
+
+#logorelario {
+  bottom: 2em;
+  position: absolute;
+}
+
+.main {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.child {
+  position: absolute;
+  top: 30%;
+  margin: 1em;
+}
+
+.inputbackground {
+  display: flex;
+  border: 3px solid #ED2B8D;
+  border-radius: 3em;
+  height: 3em;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#country_list {
+  background-color: transparent;
+  width: 60%;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #F5238D;
+  border: none;
+}
+
+#network_list {
+  background-color: transparent;
+  width: 60%;
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  color: #F5238D;
+  border: none;
+}
+
+#country_code {
+  background-color: transparent;
+  width: 20%;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  color: #F5238D;
+  border: none;
+}
+
+#phone_number {
+  background-color: transparent;
+  width: 70%;
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 20px;
+  color: #F5238D;
+  border: none;
+}
+
+.instructions {
+  font-size: 16px;
+}
+
+/* Media Query for Desktops/Laptops */
+@media screen and (min-width: 1200px) {
+  .btn {
+    width: 60%;
+  }
+
+  #submitDetection {
+    width: 60%;
+  }
+
+  #country_list,
+  #network_list {
+    width: 15%;
+  }
+}

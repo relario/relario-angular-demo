@@ -9,7 +9,7 @@ import { VonageService } from './vonage.service';
   imports: [
     HttpModule
   ],
-  controllers: [PayController],
   providers: [PayService, VonageService],
+  controllers: [PayController],
 })
 export class PayModule {}

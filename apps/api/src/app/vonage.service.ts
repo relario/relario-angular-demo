@@ -1,4 +1,4 @@
-import Vonage, { CheckResponse, ControlResponse, RequestResponse, VerifyError } from '@vonage/server-sdk';
+import Vonage, { CheckResponse, ControlResponse, RequestResponse } from '@vonage/server-sdk';
 import { environment } from '../environments/environment';
 import { Injectable } from '@nestjs/common';
 
